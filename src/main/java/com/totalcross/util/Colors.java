@@ -1,6 +1,10 @@
 package com.totalcross.util;
 
 public class Colors {
+    public static final int COLOR_1_GREEN_ENERGYGAUGE = 0x19D890;
+    public static final int COLOR_2_LIGHT_BLUE_ENERGYGAUGE = 0x19D0D8;
+    public static final int COLOR_3_BLUE_ENERGYGAUGE = 0x195FD8;
+
     public static final int COLOR_GREEN_BUTTON = 0x21C437;
     public static final int COLOR_GREEN_WBTEMP = 0xA6CEA1;
     public static final int COLOR_GREEN_TEMP = 0x75DE83;

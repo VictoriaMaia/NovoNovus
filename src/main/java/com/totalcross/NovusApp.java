@@ -27,5 +27,6 @@ public class NovusApp extends MainWindow {
         // Swapping to the container responsible for showing the home screen.
         // swap(new HomeView());
         swap(new ModbusView());
+        // swap(new AnalogOutView());
     }
 }
