@@ -14,19 +14,19 @@ public class HomeView extends Container{
 
     public void initUI() {
         // Initializing the images.
-        Images.loadImages();
+        // Images.loadImages();
 
         // Declaring components
         icLogoTotalCross = new ImageControl(Images.iTotalCrossLogoVertical);
         icLogoTotalCross.scaleToFit = true;
 
         lInit = new Label("TotalCross running in Toradex");
-        lInit.setFont(Fonts.MontserratRegular19);
+        //lInit.setFont(Fonts.MontserratRegular19);
         lInit.setForeColor(Colors.COLOR_LIGHT_GRAY);
         // Monteserrat Regular tam 19px
 
         bStart = new Button("START");
-        bStart.setFont(Fonts.MontserratBold17);
+        //bStart.setFont(Fonts.MontserratBold17);
         // Montserrat Bold tam 17px
         bStart.setBackForeColors(Colors.COLOR_GREEN_BUTTON, Colors.COLOR_WHITE);
         bStart.setBorder(BORDER_ROUNDED);
