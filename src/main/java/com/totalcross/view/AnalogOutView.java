@@ -8,6 +8,8 @@ import totalcross.ui.Container;
 import totalcross.ui.ImageControl;
 import totalcross.ui.Label;
 import totalcross.ui.MainWindow;
+import totalcross.ui.ScrollBar;
+import totalcross.ui.Slider;
 import totalcross.ui.event.UpdateListener;
 
 public class AnalogOutView extends SideMenuContainerView {
@@ -15,6 +17,7 @@ public class AnalogOutView extends SideMenuContainerView {
     Label lTitle;
     ImageControl icLogo;
     UpdateListener updateListener;
+    Slider slBar;
 
     @Override
     public void onView(Container content) {
@@ -44,10 +47,19 @@ public class AnalogOutView extends SideMenuContainerView {
         // Montserrat Extra Bold tam 24px
         lTitle.setForeColor(Colors.COLOR_WHITE);
 
+        // SLIDER
+        slBar = new Slider(ScrollBar.HORIZONTAL);
+        slBar.appId = 1;
+        slBar.setLiveScrolling(true);
+        slBar.setBackColor(Colors.COLOR_WHITE);
+        slBar.sliderColor = Colors.COLOR_WHITE;
+        slBar.setValue(10);
+
 
         // ADDING THE ELEMENTS IN SCREEN
         content.add(lTitle, CENTER, TOP+MaterialConstants.GAP55);
         content.add(energyGauge, CENTER, AFTER, SCREENSIZE+MaterialConstants.GAP40, SCREENSIZE+MaterialConstants.GAP50);
+        content.add(slBar,CENTER, AFTER+MaterialConstants.GAP90, SCREENSIZE+MaterialConstants.GAP30, PREFERRED);
         content.add(icLogo, RIGHT-MaterialConstants.GAP55, TOP+MaterialConstants.GAP40);
 
         updateListener = new UpdateListener() {

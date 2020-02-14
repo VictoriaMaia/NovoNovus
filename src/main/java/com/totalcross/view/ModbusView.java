@@ -10,6 +10,7 @@ import totalcross.ui.ImageControl;
 import totalcross.ui.Label;
 import totalcross.ui.image.Image;
 import totalcross.ui.image.ImageException;
+import totalcross.util.UnitsConverter;
 
 public class ModbusView extends SideMenuContainerView{
     // Declaring the variables.
@@ -64,11 +65,11 @@ public class ModbusView extends SideMenuContainerView{
 
         content.add(bConnect, CENTER, AFTER+MaterialConstants.GAP70, SCREENSIZE+MaterialConstants.GAP10, SCREENSIZE+MaterialConstants.GAP5);
 
-        content.add(infoRelativeHumidy, CENTER-MaterialConstants.GAP140, AFTER+MaterialConstants.GAP50, SCREENSIZE+MaterialConstants.GAP25, SCREENSIZE+MaterialConstants.GAP10);
-        content.add(infoTemperature, CENTER+MaterialConstants.GAP150, SAME, SCREENSIZE+MaterialConstants.GAP25, SCREENSIZE+MaterialConstants.GAP10);
-
-        content.add(infoWetBTemperature, CENTER-MaterialConstants.GAP140, AFTER+MaterialConstants.GAP30, SCREENSIZE+MaterialConstants.GAP25, SCREENSIZE+MaterialConstants.GAP10);
-        content.add(infoDewPoin, CENTER+MaterialConstants.GAP150, SAME, SCREENSIZE+MaterialConstants.GAP25, SCREENSIZE+MaterialConstants.GAP10);
+        content.add(infoRelativeHumidy, CENTER - UnitsConverter.toPixels(DP + 140), AFTER+MaterialConstants.GAP50, SCREENSIZE+MaterialConstants.GAP25, SCREENSIZE+MaterialConstants.GAP10);
+        content.add(infoTemperature, CENTER + UnitsConverter.toPixels(DP + 140), SAME, SCREENSIZE+MaterialConstants.GAP25, SCREENSIZE+MaterialConstants.GAP10);
+        
+        content.add(infoWetBTemperature, CENTER - UnitsConverter.toPixels(DP + 140), AFTER+MaterialConstants.GAP30, SCREENSIZE+MaterialConstants.GAP25, SCREENSIZE+MaterialConstants.GAP10);
+        content.add(infoDewPoin, CENTER + UnitsConverter.toPixels(DP + 140), SAME, SCREENSIZE+MaterialConstants.GAP25, SCREENSIZE+MaterialConstants.GAP10);
 
         content.add(icLogo, RIGHT-MaterialConstants.GAP55, TOP+MaterialConstants.GAP40);
     }

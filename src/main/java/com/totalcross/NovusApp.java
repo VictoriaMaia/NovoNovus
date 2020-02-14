@@ -25,8 +25,6 @@ public class NovusApp extends MainWindow {
         Images.loadImages();
         // Initializing the fonts.
         Fonts.loadFonts();
-		// Setting the screen font as the initialized font
-        // MainWindow.setDefaultFont(Fonts.MontserratRegular12);
         
 //
 //        SideMenuContainer.Item home = new SideMenuContainer.Item("Home", MaterialIcons._HOME, Colors.COLOR_RED, ()-> {return new HomeView();});
@@ -46,7 +44,7 @@ public class NovusApp extends MainWindow {
 //        add(sideMenu, LEFT, TOP, PARENTSIZE, PARENTSIZE);
         // Swapping to the container responsible for showing the home screen.
 
-         swap(new HomeView());
+        swap(new HomeView());
         // swap(new AnalogOutView());
     }
 }
