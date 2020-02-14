@@ -1,11 +1,14 @@
 package com.totalcross.view;
 
+import com.totalcross.util.*;
 import com.totalcross.view.components.Circle;
 
 import totalcross.ui.Container;
+import totalcross.ui.ImageControl;
 import totalcross.ui.event.ControlEvent;
 import totalcross.ui.event.PressListener;
 import totalcross.ui.gfx.Color;
+import totalcross.ui.Label;
 import totalcross.util.UnitsConverter;
 
 public class DigitalInputView extends SideMenuContainerView {
@@ -46,7 +49,18 @@ public class DigitalInputView extends SideMenuContainerView {
 
     @Override
     public void onView(Container content) {
+        ImageControl icLogo = new ImageControl(Images.iTotalCrossLogoHorizontal);
+        icLogo.scaleToFit = true;
+
+        // LABEL
+        Label lTitle = new Label("DIGITAL INPUT");
+        lTitle.setFont(Fonts.MontserratExtraBolt24);
+        // Montserrat Extra Bold tam 24px
+        lTitle.setForeColor(Colors.COLOR_WHITE);
+        content.add(lTitle, CENTER, TOP+MaterialConstants.GAP55);
         content.add(circle1, CENTER - UnitsConverter.toPixels(DP + 67), CENTER, DP + 90, DP + 90);
         content.add(circle2, CENTER + UnitsConverter.toPixels(DP + 68), CENTER, DP + 90, DP + 90);
+        content.add(icLogo, RIGHT-MaterialConstants.GAP55, TOP+MaterialConstants.GAP40);
+
     }
 }
