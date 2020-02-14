@@ -5,6 +5,8 @@ import com.totalcross.util.MaterialConstants;
 
 import totalcross.ui.Container;
 import totalcross.ui.Label;
+import totalcross.ui.gfx.Graphics;
+import totalcross.util.UnitsConverter;
 
 public class InfoModbvusViewContainer extends Container {
     private String sTitle;
@@ -20,7 +22,7 @@ public class InfoModbvusViewContainer extends Container {
     }
 
     public void initUI(){
-        setBorderStyle(BORDER_ROUNDED);
+//        setBorderStyle(BORDER_ROUNDED);
         borderColor = color; 
         setBackColor(color);
 
@@ -34,5 +36,12 @@ public class InfoModbvusViewContainer extends Container {
         add(lInfo, CENTER, AFTER);
 
 
+    }
+
+
+    @Override
+    public void onPaint(Graphics g) {
+        g.backColor = backColor;
+        g.fillRoundRect(0, 0, getWidth(), getHeight(), UnitsConverter.toPixels(DP + 8));
     }
 }
