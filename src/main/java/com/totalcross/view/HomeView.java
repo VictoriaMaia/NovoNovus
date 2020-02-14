@@ -2,10 +2,12 @@ package com.totalcross.view;
 
 import com.totalcross.util.*;
 
+import com.totalcross.view.components.SideButtons;
 import totalcross.ui.Label;
 import totalcross.ui.Button;
 import totalcross.ui.Container;
 import totalcross.ui.ImageControl;
+import totalcross.util.UnitsConverter;
 
 public class HomeView extends Container{
     private Label lInit;
@@ -37,6 +39,6 @@ public class HomeView extends Container{
         add(icLogoTotalCross, CENTER, CENTER-MaterialConstants.GAP60);
         add(lInit, CENTER, AFTER);
         add(bStart, CENTER, AFTER+MaterialConstants.GAP45, SCREENSIZE+MaterialConstants.GAP10, SCREENSIZE+MaterialConstants.GAP5);
-
+        add(new SideButtons(), LEFT, TOP, UnitsConverter.toPixels(DP + 104), PARENTSIZE);
     }
 }

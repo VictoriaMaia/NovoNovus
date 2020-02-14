@@ -8,7 +8,7 @@ import totalcross.ui.Container;
 import totalcross.ui.ImageControl;
 import totalcross.ui.Label;
 
-public class ModbusView extends Container{
+public class ModbusView extends SideMenuContainerView{
     // Declaring the variables.
     Label lTitle;
     Label lSubTitle;
@@ -19,16 +19,17 @@ public class ModbusView extends Container{
     InfoModbvusViewContainer infoWetBTemperature;
     InfoModbvusViewContainer infoDewPoin;
 
-    public void initUI() {
+    @Override
+    public void onView(Container content) {
         // Initializing the variables.
-        
+
         // IMAGE CONTROLL
-        
+
         icLogo = new ImageControl(Images.iTotalCrossLogoHorizontal);
         icLogo.scaleToFit = true;
 
         // LABEL
-        
+
         lTitle = new Label("MODBUS");
         // lTitle.setFont(Fonts.MontserratExtraBolt24);
         // Montserrat Extra Bold tam 24px
@@ -53,20 +54,18 @@ public class ModbusView extends Container{
 
 
         // ADDING THE ELEMENTS IN SCREEN
-        add(lTitle, CENTER, TOP+MaterialConstants.GAP55);
-        
-        add(lSubTitle, CENTER, AFTER+MaterialConstants.GAP20);
-        
-        add(bConnect, CENTER, AFTER+MaterialConstants.GAP70, SCREENSIZE+MaterialConstants.GAP10, SCREENSIZE+MaterialConstants.GAP5);
-        
-        add(infoRelativeHumidy, CENTER-MaterialConstants.GAP140, AFTER+MaterialConstants.GAP50, SCREENSIZE+MaterialConstants.GAP25, SCREENSIZE+MaterialConstants.GAP10);
-        add(infoTemperature, CENTER+MaterialConstants.GAP150, SAME, SCREENSIZE+MaterialConstants.GAP25, SCREENSIZE+MaterialConstants.GAP10);
-        
-        add(infoWetBTemperature, CENTER-MaterialConstants.GAP140, AFTER+MaterialConstants.GAP30, SCREENSIZE+MaterialConstants.GAP25, SCREENSIZE+MaterialConstants.GAP10);
-        add(infoDewPoin, CENTER+MaterialConstants.GAP150, SAME, SCREENSIZE+MaterialConstants.GAP25, SCREENSIZE+MaterialConstants.GAP10);
+        content.add(lTitle, CENTER, TOP+MaterialConstants.GAP55);
 
-        add(icLogo, RIGHT-MaterialConstants.GAP55, TOP+MaterialConstants.GAP40);
+        content.add(lSubTitle, CENTER, AFTER+MaterialConstants.GAP20);
 
+        content.add(bConnect, CENTER, AFTER+MaterialConstants.GAP70, SCREENSIZE+MaterialConstants.GAP10, SCREENSIZE+MaterialConstants.GAP5);
 
+        content.add(infoRelativeHumidy, CENTER-MaterialConstants.GAP140, AFTER+MaterialConstants.GAP50, SCREENSIZE+MaterialConstants.GAP25, SCREENSIZE+MaterialConstants.GAP10);
+        content.add(infoTemperature, CENTER+MaterialConstants.GAP150, SAME, SCREENSIZE+MaterialConstants.GAP25, SCREENSIZE+MaterialConstants.GAP10);
+
+        content.add(infoWetBTemperature, CENTER-MaterialConstants.GAP140, AFTER+MaterialConstants.GAP30, SCREENSIZE+MaterialConstants.GAP25, SCREENSIZE+MaterialConstants.GAP10);
+        content.add(infoDewPoin, CENTER+MaterialConstants.GAP150, SAME, SCREENSIZE+MaterialConstants.GAP25, SCREENSIZE+MaterialConstants.GAP10);
+
+        content.add(icLogo, RIGHT-MaterialConstants.GAP55, TOP+MaterialConstants.GAP40);
     }
 }
