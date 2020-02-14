@@ -2,10 +2,7 @@ package com.totalcross.view.components;
 
 import com.totalcross.util.Colors;
 import com.totalcross.util.Fonts;
-import sun.tools.jconsole.Plotter;
 import totalcross.ui.Button;
-import totalcross.ui.Control;
-import totalcross.ui.gfx.Color;
 import totalcross.ui.gfx.Graphics;
 import totalcross.ui.image.Image;
 import totalcross.util.UnitsConverter;
