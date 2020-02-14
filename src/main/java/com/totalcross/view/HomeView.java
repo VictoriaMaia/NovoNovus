@@ -3,10 +3,7 @@ package com.totalcross.view;
 import com.totalcross.util.*;
 
 import com.totalcross.view.components.SideButtons;
-import totalcross.ui.Label;
-import totalcross.ui.Button;
-import totalcross.ui.Container;
-import totalcross.ui.ImageControl;
+import totalcross.ui.*;
 import totalcross.util.UnitsConverter;
 
 public class HomeView extends Container{
@@ -33,12 +30,13 @@ public class HomeView extends Container{
         bStart.setBackForeColors(Colors.COLOR_GREEN_BUTTON, Colors.COLOR_WHITE);
         bStart.setBorder(BORDER_ROUNDED);
 		bStart.setDoEffect(false);
-
+		bStart.addPressListener((c) -> {
+            MainWindow.getMainWindow().swap(new ModbusView());
+        });
 
         // Components in the screen
         add(icLogoTotalCross, CENTER, CENTER-MaterialConstants.GAP60);
         add(lInit, CENTER, AFTER);
         add(bStart, CENTER, AFTER+MaterialConstants.GAP45, SCREENSIZE+MaterialConstants.GAP10, SCREENSIZE+MaterialConstants.GAP5);
-        add(new SideButtons(), LEFT, TOP, UnitsConverter.toPixels(DP + 104), PARENTSIZE);
     }
 }

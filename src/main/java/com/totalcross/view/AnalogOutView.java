@@ -10,14 +10,15 @@ import totalcross.ui.Label;
 import totalcross.ui.MainWindow;
 import totalcross.ui.event.UpdateListener;
 
-public class AnalogOutView extends Container {
+public class AnalogOutView extends SideMenuContainerView {
     // Declaring the variables.
     Label lTitle;
     ImageControl icLogo;
     UpdateListener updateListener;
-    
-    public void initUI() {
-    
+
+    @Override
+    public void onView(Container content) {
+
         Gauge energyGauge = new EnergyGauge(0, 80, 180);
         energyGauge.section(80, Colors.COLOR_1_GREEN_ENERGYGAUGE);
         energyGauge.section(80, Colors.COLOR_2_LIGHT_BLUE_ENERGYGAUGE);
@@ -30,24 +31,24 @@ public class AnalogOutView extends Container {
         energyGauge.setValue(60);
 
         // Initializing the variables.
-        
+
         // IMAGE CONTROLL
-        
+
         icLogo = new ImageControl(Images.iTotalCrossLogoHorizontal);
         icLogo.scaleToFit = true;
 
         // LABEL
-        
+
         lTitle = new Label("ANALOG OUTPUT");
         // lTitle.setFont(Fonts.MontserratExtraBolt24);
         // Montserrat Extra Bold tam 24px
         lTitle.setForeColor(Colors.COLOR_WHITE);
 
-       
+
         // ADDING THE ELEMENTS IN SCREEN
-        add(lTitle, CENTER, TOP+MaterialConstants.GAP55);
-        add(energyGauge, CENTER, AFTER, SCREENSIZE+MaterialConstants.GAP40, SCREENSIZE+MaterialConstants.GAP50);
-        add(icLogo, RIGHT-MaterialConstants.GAP55, TOP+MaterialConstants.GAP40);
+        content.add(lTitle, CENTER, TOP+MaterialConstants.GAP55);
+        content.add(energyGauge, CENTER, AFTER, SCREENSIZE+MaterialConstants.GAP40, SCREENSIZE+MaterialConstants.GAP50);
+        content.add(icLogo, RIGHT-MaterialConstants.GAP55, TOP+MaterialConstants.GAP40);
 
         updateListener = new UpdateListener() {
             AnimationFunctions af = new AnimationFunctions();
@@ -80,6 +81,5 @@ public class AnalogOutView extends Container {
             }
         };
         MainWindow.getMainWindow().addUpdateListener(updateListener);
-
     }
 }

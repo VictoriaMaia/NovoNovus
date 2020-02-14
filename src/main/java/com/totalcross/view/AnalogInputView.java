@@ -5,7 +5,7 @@ import com.totalcross.view.components.Graphic;
 import totalcross.ui.Container;
 import totalcross.ui.gfx.Color;
 
-public class AnalogInputView extends Container {
+public class AnalogInputView extends SideMenuContainerView {
 
     Graphic graphic;
 
@@ -22,9 +22,11 @@ public class AnalogInputView extends Container {
         graphic.setSideTextColor(Color.getRGB("716D6D"));
     }
 
+
     @Override
-    public void initUI() {
-        add(graphic, CENTER, CENTER, DP + 451, DP + 200);
+    public void onView(Container content) {
+        content.
+                add(graphic, CENTER, CENTER, DP + 451, DP + 200);
     }
 
 }

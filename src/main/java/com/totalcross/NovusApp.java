@@ -24,7 +24,7 @@ public class NovusApp extends MainWindow {
         // Initializing the images.
         Images.loadImages();
         // Initializing the fonts.
-		// Fonts.loadFonts();
+        Fonts.loadFonts();
 		// Setting the screen font as the initialized font
         // MainWindow.setDefaultFont(Fonts.MontserratRegular12);
         
@@ -46,7 +46,7 @@ public class NovusApp extends MainWindow {
 //        add(sideMenu, LEFT, TOP, PARENTSIZE, PARENTSIZE);
         // Swapping to the container responsible for showing the home screen.
 
-         swap(new ModbusView());
+         swap(new HomeView());
         // swap(new AnalogOutView());
     }
 }

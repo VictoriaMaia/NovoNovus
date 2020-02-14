@@ -3,10 +3,13 @@ package com.totalcross.view;
 import com.totalcross.util.*;
 import com.totalcross.view.components.InfoModbvusViewContainer;
 
+import totalcross.io.IOException;
 import totalcross.ui.Button;
 import totalcross.ui.Container;
 import totalcross.ui.ImageControl;
 import totalcross.ui.Label;
+import totalcross.ui.image.Image;
+import totalcross.ui.image.ImageException;
 
 public class ModbusView extends SideMenuContainerView{
     // Declaring the variables.
@@ -31,13 +34,14 @@ public class ModbusView extends SideMenuContainerView{
         // LABEL
 
         lTitle = new Label("MODBUS");
-        // lTitle.setFont(Fonts.MontserratExtraBolt24);
+         lTitle.setFont(Fonts.MontserratExtraBolt24);
         // Montserrat Extra Bold tam 24px
         lTitle.setForeColor(Colors.COLOR_WHITE);
 
         lSubTitle = new Label("Simulated MobBus Device");
         // Montserrat Regular tam 20px
         lSubTitle.setForeColor(Colors.COLOR_WHITE);
+        lSubTitle.setFont(Fonts.MontserratRegular20);
 
         // INFO MODBVUS VIEW CONTAINER
         infoTemperature = new InfoModbvusViewContainer("Temperature", "-6.92° C", Colors.COLOR_GREEN_TEMP);
@@ -46,7 +50,7 @@ public class ModbusView extends SideMenuContainerView{
         infoDewPoin = new InfoModbvusViewContainer("Dew Point", "-2.56° C", Colors.COLOR_YELLOW);
 
         bConnect = new Button("Connect");
-        // bConnect.setFont(Fonts.MontserratRegular17);
+        bConnect.setFont(Fonts.MontserratRegular17);
         // Montserrat Regular tam 17px
         bConnect.setBackForeColors(Colors.COLOR_GREEN_BUTTON, Colors.COLOR_WHITE);
         bConnect.setBorder(BORDER_ROUNDED);

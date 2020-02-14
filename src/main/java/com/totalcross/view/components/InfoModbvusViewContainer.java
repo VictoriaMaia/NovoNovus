@@ -27,10 +27,10 @@ public class InfoModbvusViewContainer extends Container {
         setBackColor(color);
 
         lTitle = new Label(sTitle);
-        // lTitle.setFont(Fonts.MontserratRegular12);
+        lTitle.setFont(Fonts.MontserratRegular12);
 
         lInfo = new Label(sInfo);
-        // lInfo.setFont(Fonts.MontserratSemiBold12);
+        lInfo.setFont(Fonts.MontserratSemiBold12);
 
         add(lTitle, CENTER, TOP+MaterialConstants.GAP4);
         add(lInfo, CENTER, AFTER);

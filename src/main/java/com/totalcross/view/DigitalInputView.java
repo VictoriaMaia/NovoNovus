@@ -8,7 +8,7 @@ import totalcross.ui.event.PressListener;
 import totalcross.ui.gfx.Color;
 import totalcross.util.UnitsConverter;
 
-public class DigitalInputView extends Container {
+public class DigitalInputView extends SideMenuContainerView {
 
     Circle circle1;
     boolean circle1On;
@@ -45,8 +45,8 @@ public class DigitalInputView extends Container {
 
 
     @Override
-    public void initUI() {
-        add(circle1, CENTER - UnitsConverter.toPixels(DP + 67), CENTER, DP + 90, DP + 90);
-        add(circle2, CENTER + UnitsConverter.toPixels(DP + 68), CENTER, DP + 90, DP + 90);
+    public void onView(Container content) {
+        content.add(circle1, CENTER - UnitsConverter.toPixels(DP + 67), CENTER, DP + 90, DP + 90);
+        content.add(circle2, CENTER + UnitsConverter.toPixels(DP + 68), CENTER, DP + 90, DP + 90);
     }
 }
