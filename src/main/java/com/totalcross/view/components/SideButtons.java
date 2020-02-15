@@ -5,6 +5,7 @@ import com.totalcross.util.Images;
 import com.totalcross.view.*;
 import totalcross.ui.Container;
 import totalcross.ui.MainWindow;
+import totalcross.ui.event.ControlEvent;
 import totalcross.ui.event.Event;
 import totalcross.ui.event.EventHandler;
 import totalcross.ui.event.EventType;
@@ -24,20 +25,36 @@ public class SideButtons extends Container {
 
     @Override
     public void initUI() {
-        addButton("ANALOG INPUT", Images.iAnalogInputButton, (c) -> {
-            MainWindow.getMainWindow().swap(new AnalogInputView());
+        addButton("ANALOG INPUT", Images.iAnalogInputButton, new PressListener(){
+            @Override
+            public void controlPressed(ControlEvent e) {
+                MainWindow.getMainWindow().swap(new AnalogInputView());
+            }
         });
-        addButton("MODBUS", Images.iModbusButton, (c) -> {
-            MainWindow.getMainWindow().swap(new ModbusView());
+        addButton("MODBUS", Images.iModbusButton, new PressListener(){
+
+            @Override
+            public void controlPressed(ControlEvent e) {
+                MainWindow.getMainWindow().swap(new ModbusView());
+            }
         });
-        addButton("ANALOG OUTPUT", Images.iAnalogOutputButton, (c) -> {
-            MainWindow.getMainWindow().swap(new AnalogOutView());
+        addButton("ANALOG OUTPUT", Images.iAnalogOutputButton,new PressListener(){
+            @Override
+            public void controlPressed(ControlEvent e) {
+                MainWindow.getMainWindow().swap(new AnalogOutView());
+            }
         });
-        addButton("DIGITAL INPUT", Images.iDigitalInputButton, (c) -> {
-            MainWindow.getMainWindow().swap(new DigitalInputView());
+        addButton("DIGITAL INPUT", Images.iDigitalInputButton, new PressListener(){
+            @Override
+            public void controlPressed(ControlEvent e) {
+                MainWindow.getMainWindow().swap(new DigitalInputView());
+            }
         });
-        addButton(" ", Images.iHomeButton, (c) -> {
-            MainWindow.getMainWindow().swap(new HomeView());
+        addButton(" ", Images.iHomeButton, new PressListener(){
+            @Override
+            public void controlPressed(ControlEvent e) {
+                MainWindow.getMainWindow().swap(new HomeView());
+            }
         });
     }
 

@@ -53,7 +53,7 @@ public class AnalogOutView extends SideMenuContainerView {
         slBar.setLiveScrolling(true);
         slBar.setBackColor(Colors.COLOR_WHITE);
         slBar.sliderColor = Colors.COLOR_WHITE;
-        slBar.setValue(10);
+        slBar.setValue(50);
 
 
         // ADDING THE ELEMENTS IN SCREEN
@@ -63,32 +63,17 @@ public class AnalogOutView extends SideMenuContainerView {
         content.add(icLogo, RIGHT-MaterialConstants.GAP55, TOP+MaterialConstants.GAP40);
 
         updateListener = new UpdateListener() {
-            AnimationFunctions af = new AnimationFunctions();
-            int rpmTotalTime = 3000;
-            int currentime = 0;
 
             int count = -1;
 
             @Override
             public void updateListenerTriggered(int elapsedMilliseconds) {
-                currentime += elapsedMilliseconds;
 
                 if (++count % 3 == 0) {
-                    double ratio = rpmAnimationFunction(currentime % rpmTotalTime, rpmTotalTime);
+                    double ratio = slBar.getValue()/100.0;
 
                     energyGauge.setValue((int) ((energyGauge.getMax() - energyGauge.getMin()) * ratio) - energyGauge.getMin());
                     energyGauge.repaintNow();
-                }
-            }
-
-            public double rpmAnimationFunction(int time, int totalTime) {
-                double ratio = time / (double) totalTime;
-                if (ratio < .30) {
-                    ratio = ratio / 0.30;
-                    return af.easeOutQuad(ratio);
-                } else {
-                    ratio = (ratio - 0.30) / 0.70;
-                    return 1.0 - af.easeOutSine(ratio);
                 }
             }
         };

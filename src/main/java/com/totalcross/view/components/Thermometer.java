@@ -53,20 +53,19 @@ public class Thermometer extends Control {
         for(int i = 0, j = 0; i <= majorDivisions; j = (j + 1) % minorDivisions) {
             if(j == 0) {
                 g.drawThickLine(pointsXStart, pointY, pointsXEnd, pointY, UnitsConverter.toPixels(DP + 2));
-                g.drawText(valueText, pointsXEnd + UnitsConverter.toPixels(DP + 3), pointY - font.fm.height/2);
+                g.drawText(valueText, pointsXEnd + UnitsConverter.toPixels(DP + 2), pointY - font.fm.height/2);
                 i++;
-                Vm.debug(valueText);
                 drawValue = maxValue - (int) (1.0 * i/majorDivisions*maxValue);
                 valueText = "" + drawValue;
             } else {
-                g.drawThickLine(pointsXStart, pointY, pointsXEnd - UnitsConverter.toPixels(DP + 2), pointY, UnitsConverter.toPixels(DP + 1));
+                g.drawLine(pointsXStart, pointY, pointsXEnd - UnitsConverter.toPixels(DP + 2), pointY);
             }
             pointY += incr;
         }
 
         g.backColor = Color.getRGB("FF4A4A");
         int barBottom = height - width;
-        int barTop = (int) (1.0 * value / maxValue * (barBottom - radius)) + UnitsConverter.toPixels(DP + 5) + radius;
+        int barTop = (int) (( 1 - 1.0 * value / maxValue )* (barBottom - radius)) + UnitsConverter.toPixels(DP + 5) + radius;
         g.fillRect(UnitsConverter.toPixels(DP + 25), barTop, UnitsConverter.toPixels(DP + 10), barBottom - barTop + UnitsConverter.toPixels(DP + 12));
         g.fillCircle(UnitsConverter.toPixels(DP + 30), barTop, UnitsConverter.toPixels(DP + 5));
         height = height + 1;

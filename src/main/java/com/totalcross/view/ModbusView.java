@@ -35,7 +35,7 @@ public class ModbusView extends SideMenuContainerView{
         // LABEL
 
         lTitle = new Label("MODBUS");
-         lTitle.setFont(Fonts.MontserratExtraBolt24);
+         lTitle.setFont(Fonts.MontserratExtraBold24);
         // Montserrat Extra Bold tam 24px
         lTitle.setForeColor(Colors.COLOR_WHITE);
 
@@ -65,11 +65,11 @@ public class ModbusView extends SideMenuContainerView{
 
         content.add(bConnect, CENTER, AFTER+MaterialConstants.GAP70, SCREENSIZE+MaterialConstants.GAP10, SCREENSIZE+MaterialConstants.GAP5);
 
-        content.add(infoRelativeHumidy, CENTER - UnitsConverter.toPixels(DP + 140), AFTER+MaterialConstants.GAP50, SCREENSIZE+MaterialConstants.GAP25, SCREENSIZE+MaterialConstants.GAP10);
-        content.add(infoTemperature, CENTER + UnitsConverter.toPixels(DP + 140), SAME, SCREENSIZE+MaterialConstants.GAP25, SCREENSIZE+MaterialConstants.GAP10);
-        
-        content.add(infoWetBTemperature, CENTER - UnitsConverter.toPixels(DP + 140), AFTER+MaterialConstants.GAP30, SCREENSIZE+MaterialConstants.GAP25, SCREENSIZE+MaterialConstants.GAP10);
-        content.add(infoDewPoin, CENTER + UnitsConverter.toPixels(DP + 140), SAME, SCREENSIZE+MaterialConstants.GAP25, SCREENSIZE+MaterialConstants.GAP10);
+        content.add(infoRelativeHumidy, CENTER - UnitsConverter.toPixels(DP + 124), AFTER+MaterialConstants.GAP50, DP + 224, DP + 53);
+        content.add(infoTemperature, CENTER + UnitsConverter.toPixels(DP + 124), SAME, DP + 224, DP + 53);
+
+        content.add(infoWetBTemperature, CENTER - UnitsConverter.toPixels(DP + 124), AFTER+MaterialConstants.GAP30, DP + 224, DP + 53);
+        content.add(infoDewPoin, CENTER + UnitsConverter.toPixels(DP + 124), SAME, DP + 224, DP + 53);
 
         content.add(icLogo, RIGHT-MaterialConstants.GAP55, TOP+MaterialConstants.GAP40);
     }

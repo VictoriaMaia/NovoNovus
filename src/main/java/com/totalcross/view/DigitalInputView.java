@@ -43,7 +43,7 @@ public class DigitalInputView extends SideMenuContainerView {
             }
         });
         circle1On = true;
-    
+
     }
 
 
@@ -54,7 +54,7 @@ public class DigitalInputView extends SideMenuContainerView {
 
         // LABEL
         Label lTitle = new Label("DIGITAL INPUT");
-        lTitle.setFont(Fonts.MontserratExtraBolt24);
+        lTitle.setFont(Fonts.MontserratExtraBold24);
         // Montserrat Extra Bold tam 24px
         lTitle.setForeColor(Colors.COLOR_WHITE);
         content.add(lTitle, CENTER, TOP+MaterialConstants.GAP55);

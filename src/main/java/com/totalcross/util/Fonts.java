@@ -13,7 +13,8 @@ public class Fonts {
     public static Font MontserratRegular19;
     public static Font MontserratRegular20;
     public static Font MontserratSemiBold12;
-    public static Font MontserratExtraBolt24;
+    public static Font MontserratExtraBold19;
+    public static Font MontserratExtraBold24;
     public static Font MontserratLight7;
 
 
@@ -29,7 +30,8 @@ public class Fonts {
             MontserratRegular19 = Font.getFont(19);
             MontserratRegular20 = Font.getFont(20);
             MontserratSemiBold12 = Font.getFont(12);
-            MontserratExtraBolt24 = Font.getFont(24);
+            MontserratExtraBold19 = Font.getFont(19);
+            MontserratExtraBold24 = Font.getFont(24);
             MontserratLight7 = Font.getFont(7);
         }
         else {
@@ -43,7 +45,8 @@ public class Fonts {
             MontserratRegular19 = Font.getFont("Montserrat-Regular", false, 19);
             MontserratRegular20 = Font.getFont("Montserrat-Regular", false, 20);
             MontserratSemiBold12 = Font.getFont("Montserrat-SemiBold", false, 12);
-            MontserratExtraBolt24 = Font.getFont("Montserrat-ExtraBold", true, 24);
+            MontserratExtraBold19 = Font.getFont("Montserrat-ExtraBold", true, 19);
+            MontserratExtraBold24 = Font.getFont("Montserrat-ExtraBold", true, 24);
             MontserratLight7 = Font.getFont("Montserrat-Light", true, 7);
         }
 	}
