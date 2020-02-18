@@ -31,7 +31,7 @@ public class HomeView extends Container{
         bStart.setBorder(BORDER_ROUNDED);
 		bStart.setDoEffect(false);
 		bStart.addPressListener((c) -> {
-            MainWindow.getMainWindow().swap(new ModbusView());
+            MainWindow.getMainWindow().swap(new AnalogInputView());
         });
 
         // Components in the screen
