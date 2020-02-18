@@ -39,7 +39,7 @@ public class ModbusView extends SideMenuContainerView{
         // Montserrat Extra Bold tam 24px
         lTitle.setForeColor(Colors.COLOR_WHITE);
 
-        lSubTitle = new Label("Simulated MobBus Device");
+        lSubTitle = new Label("Simulated ModBus Device");
         // Montserrat Regular tam 20px
         lSubTitle.setForeColor(Colors.COLOR_WHITE);
         lSubTitle.setFont(Fonts.MontserratRegular20);
