@@ -3,13 +3,10 @@ package com.totalcross.view;
 import com.totalcross.util.*;
 import com.totalcross.view.components.InfoModbvusViewContainer;
 
-import totalcross.io.IOException;
 import totalcross.ui.Button;
 import totalcross.ui.Container;
 import totalcross.ui.ImageControl;
 import totalcross.ui.Label;
-import totalcross.ui.image.Image;
-import totalcross.ui.image.ImageException;
 import totalcross.util.UnitsConverter;
 
 public class ModbusView extends SideMenuContainerView{
@@ -36,11 +33,9 @@ public class ModbusView extends SideMenuContainerView{
 
         lTitle = new Label("MODBUS");
          lTitle.setFont(Fonts.MontserratExtraBold24);
-        // Montserrat Extra Bold tam 24px
         lTitle.setForeColor(Colors.COLOR_WHITE);
 
         lSubTitle = new Label("Simulated ModBus Device");
-        // Montserrat Regular tam 20px
         lSubTitle.setForeColor(Colors.COLOR_WHITE);
         lSubTitle.setFont(Fonts.MontserratRegular20);
 
@@ -52,7 +47,6 @@ public class ModbusView extends SideMenuContainerView{
 
         bConnect = new Button("Connect");
         bConnect.setFont(Fonts.MontserratRegular17);
-        // Montserrat Regular tam 17px
         bConnect.setBackForeColors(Colors.COLOR_GREEN_BUTTON, Colors.COLOR_WHITE);
         bConnect.setBorder(BORDER_ROUNDED);
         bConnect.setDoEffect(false);

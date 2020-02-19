@@ -1,7 +1,6 @@
 package com.totalcross.view;
 
 import com.totalcross.util.*;
-import com.totalcross.view.components.*;
 import com.totalcross.view.components.gauge.*;
 
 import totalcross.ui.Container;
@@ -28,7 +27,6 @@ public class AnalogOutView extends SideMenuContainerView {
         energyGauge.section(80, Colors.COLOR_3_BLUE_ENERGYGAUGE);
         energyGauge.setMajorTickInterval(20);
         energyGauge.setMinorTickInterval(5);
-        // energyGauge.setValueLabelFont(Font.getFont(25));
         energyGauge.setValueSuffix(" °C");
         energyGauge.setForeColor(0x0);
         energyGauge.setValue(60);
@@ -43,8 +41,6 @@ public class AnalogOutView extends SideMenuContainerView {
         // LABEL
 
         lTitle = new Label("ANALOG OUTPUT");
-        // lTitle.setFont(Fonts.MontserratExtraBolt24);
-        // Montserrat Extra Bold tam 24px
         lTitle.setForeColor(Colors.COLOR_WHITE);
 
         // SLIDER

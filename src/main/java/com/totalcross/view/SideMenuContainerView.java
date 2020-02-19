@@ -1,12 +1,8 @@
 package com.totalcross.view;
 
-
 import com.totalcross.util.Colors;
 import com.totalcross.view.components.SideButtons;
 import totalcross.ui.Container;
-import totalcross.ui.event.Event;
-import totalcross.ui.event.EventHandler;
-import totalcross.ui.gfx.Color;
 import totalcross.util.UnitsConverter;
 
 public abstract class SideMenuContainerView extends Container {
@@ -29,3 +25,4 @@ public abstract class SideMenuContainerView extends Container {
     public abstract void onView(Container content);
 
 }
+
