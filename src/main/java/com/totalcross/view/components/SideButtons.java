@@ -1,6 +1,7 @@
 package com.totalcross.view.components;
 
 import com.totalcross.util.Colors;
+import com.totalcross.util.Fonts;
 import com.totalcross.util.Images;
 import com.totalcross.view.*;
 
@@ -23,7 +24,7 @@ import java.util.ArrayList;
 
 public class SideButtons extends Container {
     ArrayList<SideMenuButton> buttons = new ArrayList<SideMenuButton>();
-    private Label lPresentaionMode = new Label("Presentation\nMode", CENTER);
+    private Label lPresentaionMode = new Label("PRESENTATION\nMODE", CENTER);
 
     static int count;
     static int time;
@@ -51,9 +52,6 @@ public class SideButtons extends Container {
                         case 3:
                         MainWindow.getMainWindow().swap(new DigitalInputView());
                         break;
-                        case 4:
-                        MainWindow.getMainWindow().swap(new HomeView());
-                        break;
                     }
                     count = (count + 1) % 5;
             }
@@ -69,6 +67,7 @@ public class SideButtons extends Container {
         check.transparentBackground = true;
 
         lPresentaionMode.setForeColor(Colors.COLOR_GREEN_BUTTON);
+        lPresentaionMode.setFont(Fonts.MontserratLight7);
         lPresentaionMode.transparentBackground = true;
 
 
@@ -110,8 +109,8 @@ public class SideButtons extends Container {
             }
         });
 
-        add(check, LEFT+UnitsConverter.toPixels(DP + 40), BOTTOM - UnitsConverter.toPixels(DP + 50));
-        add(lPresentaionMode, LEFT, AFTER);
+        add(check, LEFT+UnitsConverter.toPixels(DP + 40), BOTTOM - UnitsConverter.toPixels(DP + 30));
+        add(lPresentaionMode, LEFT+UnitsConverter.toPixels(DP + 20), AFTER);
     }
 
     public void addButton(String text, Image image, PressListener pressListener) {
